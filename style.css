@@ -1,0 +1,163 @@
+/* FONT */
+
+@font-face {
+    font-family: "Jomolhari" ;
+    src: url("font/Jomolhari-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inter Regular";
+    src: url("font/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+@font-face {
+    font-family: "Inter Italic";
+    src: url("font/Inter-Italic-VariableFont_opsz\,wght.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*, body {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Inter Regular";
+    color: #1A2130;
+    background-color: #F5F5F5;
+}
+
+/* HOMEPAGE */
+
+.hero {
+    height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    margin-left:5%;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Zoom à 105% */
+    }
+    100% {
+        transform: scale(1); /* Retour à la taille originale */
+    }
+}
+
+.hero-text h1 {
+    font-family: "Jomolhari";
+    font-size: 7.5vw;
+    color: #1A2130;
+    animation: zoom 3s ease-in-out infinite;
+}
+
+
+.hero-text p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    animation: zoom 3s ease-in-out infinite;
+}
+
+.hero-text a{
+    text-decoration: none;
+    color:#EB8317;
+    font-size: 20px;
+    animation: zoom 3s ease-in-out infinite;
+}
+
+.hero-text a:hover{
+    color:#1A2130;
+}
+
+.hero img {
+    width: 100%; 
+    max-width: 1300px; 
+    height: auto; 
+}
+
+@media (max-width: 768px){
+    .hero {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .hero-text h1{
+        font-size: 15vw;
+    }
+
+}
+
+/* Pièce */
+
+.prologue {
+    height: 100vh;
+    background-color: #1A2130;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    transition: opacity 0.5s ease, transform 2s ease;
+    opacity: 1; 
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.prologue.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.prologue h2 {
+    font-family: "Jomolhari";
+    font-size: 5vw;
+    color: #F5F5F5; 
+    background-color: #1A2130;
+    margin-bottom: 2%;
+}
+
+.prologue p {
+    text-align: center;
+    width: 70%;
+    color: #F5F5F5;
+    background-color: #1A2130;
+    line-height: 40px;
+    margin-bottom: 2%;
+    font-size: 20px;
+}
+
+.prologue a {
+    color: #EB8317; 
+    background-color: #1A2130;
+    text-decoration: none;   
+    font-size: 20px;
+}
+
+.prologue a:hover {
+    color:#F5F5F5;
+}
+
+.piece {
+    margin:10%;
+    font-size:20px;
+    text-align: center;
+}
+
+.piece .intro{
+    font-family: "Inter Italic" ;
+}
+
